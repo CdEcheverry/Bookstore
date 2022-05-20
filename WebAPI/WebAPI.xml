@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:WebAPI.Controllers.AuthorController.Get">
+            <summary>
+            Get all authors
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.AuthorController.GetByID(System.Int32)">
+            <summary>
+            Get author by Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.AuthorController.Create(Aplication.Authors.CreateAuthor.Implement)">
+            <summary>
+            Create the Author
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.AuthorController.Update(System.Int32,Aplication.Authors.UpdateAuthor.Implement)">
+            <summary>
+            Update the author given its Id
+            </summary>
+            <param name="id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.AuthorController.Delete(System.Int32)">
+            <summary>
+            Delete the author given its Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BookController.#ctor(MediatR.IMediator)">
+            <summary>
+            constructor
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:WebAPI.Controllers.BookController.Get(System.String,System.String)">
+            <summary>
+            Get a list of books given a filter 
+            </summary>
+            <remarks> allowed param:AuthorFullName , YearPublication , Tittle</remarks>
+            <param name="param"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BookController.Get">
+            <summary>
+            Get all books 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BookController.GetByID(System.Int32)">
+            <summary>
+            Get book by Id 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BookController.Create(Aplication.Books.CreateBook.Implement)">
+            <summary>
+            Create book
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BookController.Update(System.Int32,Aplication.Books.UpdateBook.Implement)">
+            <summary>
+            Update the book given its Id
+            </summary>
+            <param name="id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.BookController.Delete(System.Int32)">
+            <summary>
+            delete the book given its Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.EditorialController.Get">
+            <summary>
+            Get all Editorials
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.EditorialController.GetByID(System.Int32)">
+            <summary>
+            Get the Editorial given its Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.EditorialController.Create(Aplication.Editorials.CreateEditorial.Implement)">
+            <summary>
+            Create Editorial
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.EditorialController.Update(System.Int32,Aplication.Editorials.UpdateEditorial.Implement)">
+            <summary>
+            update the Editorial given its Id
+            </summary>
+            <param name="id"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebAPI.Controllers.EditorialController.Delete(System.Int32)">
+            <summary>
+            Delete the Editorial given its Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

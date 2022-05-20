@@ -11,6 +11,9 @@ using Aplication.Authors;
 using Aplication.Services;
 using FluentValidation.AspNetCore;
 using WebAPI.Middleware;
+using System.Reflection;
+using System;
+using System.IO;
 
 namespace WebAPI
 {
@@ -36,6 +39,9 @@ namespace WebAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPI", Version = "v1" });
                 c.CustomSchemaIds(c => c.FullName);
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
 
             AddCustomServices(services);

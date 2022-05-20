@@ -120,7 +120,7 @@ namespace Aplication.Services
                 case SearchType.YearPublication:
                     books = await _context.Book.Where(x => x.YearPublication.Contains(value)).Include(x => x.Author).Include(y => y.Editorial).ToListAsync();
                     break;
-                case SearchType.Fullname:
+                case SearchType.AuthorFullName:
                     books = await _context.Book.Where(x => x.Author.FullName.Contains(value)).Include(x => x.Author).Include(y => y.Editorial).ToListAsync();
                     break;
                 default:
