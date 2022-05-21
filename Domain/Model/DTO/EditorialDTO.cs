@@ -8,9 +8,9 @@ namespace Domain.DTO
 {
     public class EditorialDTO
     {
+        public int idEditorial { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public int MaximumRegisteredBooks { get; set; }
-        public ICollection<BookDTO> BooksDTO { get; set; }
     }
 }

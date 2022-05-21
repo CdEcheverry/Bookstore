@@ -31,7 +31,7 @@ namespace Aplication.Authors
                 RuleFor(x => x.FullName).NotEmpty();
                 RuleFor(x => x.City).NotEmpty();
                 RuleFor(x => x.Birthday).NotEmpty();
-                RuleFor(x => x.Email).NotEmpty();
+                RuleFor(x => x.Email).NotEmpty().EmailAddress().WithMessage("Se requiere un email valido");
             }
         }
 

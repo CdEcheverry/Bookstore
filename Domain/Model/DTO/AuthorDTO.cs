@@ -9,8 +9,8 @@ namespace Domain.DTO
 {
     public class AuthorDTO
     {
+        public int IdAuthor { get; set; }
         public string FullName { get; set; }
         public string City { get; set; }
-        public ICollection<BookDTO> BookDTO {get; set;}
     }
 }

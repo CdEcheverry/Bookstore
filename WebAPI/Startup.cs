@@ -29,6 +29,7 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddAutoMapper(typeof(GetAllAuthors.Handler));
             services.AddDbContext<BookStoreContext>(options => {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaulConnection"));
@@ -55,6 +56,12 @@ namespace WebAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseCors(options=> {
+                options.WithOrigins("http://localhost:4200");
+                options.AllowAnyMethod();
+                options.AllowAnyHeader();
+            });
             app.UseMiddleware<HandlerErrorMiddleware>();
             if (env.IsDevelopment())
             {
@@ -63,7 +70,7 @@ namespace WebAPI
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI v1"));
             }
 
-          //  app.UseHttpsRedirection();
+           app.UseHttpsRedirection();
 
             app.UseRouting();
 

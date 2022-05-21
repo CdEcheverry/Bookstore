@@ -8,6 +8,7 @@ namespace Domain.DTO
 {
     public class BookDTO
     {
+        public int IdBook { get; set; }
         public string Tittle { get; set; }
         public string Gender { get; set; }
         public int NumberPages { get; set; }

@@ -13,8 +13,8 @@ namespace Aplication
     {
         public MappingProfile()
         {
-            CreateMap<Author, AuthorDTO>().ForMember(x=> x.BookDTO, y=> y.MapFrom(z => z.BooksList));
-            CreateMap<Editorial, EditorialDTO>().ForMember(x => x.BooksDTO, y => y.MapFrom(z => z.BooksList));
+            CreateMap<Author, AuthorDTO>();
+            CreateMap<Editorial, EditorialDTO>();
             CreateMap<Book, BookDTO>()
                 .ForMember(x=> x.AuthorFullName, y=> y.MapFrom(z=>z.Author.FullName))
                 .ForMember(p => p.EditorialName, w => w.MapFrom(a => a.Editorial.Name));
